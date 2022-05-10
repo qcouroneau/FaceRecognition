@@ -7,8 +7,8 @@
     tools:context=".SecondFragment">
 
     <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="95dp"
+        android:layout_width="353dp"
+        android:layout_height="82dp"
         android:layout_marginTop="532dp"
         android:background="@drawable/button_states"
         android:orientation="horizontal"
@@ -23,15 +23,19 @@
             android:layout_height="70dp"
             android:layout_marginHorizontal="15dp"
             android:layout_weight="1"
-            android:background="@drawable/attention" />
+            android:background="@drawable/close"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/first_fragment_label" />
 
         <android.widget.Button
             android:id="@+id/capture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="98dp"
+            android:layout_height="72dp"
             android:layout_marginHorizontal="15dp"
             android:layout_weight="1"
-            android:background="@drawable/bandicam" />
+            android:background="@drawable/prf"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/hello_first_fragment" />
 
         <android.widget.Button
             android:id="@+id/done"
@@ -39,18 +43,36 @@
             android:layout_height="71dp"
             android:layout_marginHorizontal="15dp"
             android:layout_weight="1"
-            android:background="@drawable/ok" />
+            android:background="@drawable/ok"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/action_settings" />
 
     </LinearLayout>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view_finder"
         android:layout_width="410dp"
         android:layout_height="731dp"
-        android:paddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="61dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="306dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="618dp"
+            android:background="@drawable/retur"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
