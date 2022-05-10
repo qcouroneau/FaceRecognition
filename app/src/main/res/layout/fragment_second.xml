@@ -7,12 +7,13 @@
     tools:context=".SecondFragment">
 
     <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="556dp"
+        android:layout_width="360dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="532dp"
+        android:background="@drawable/button_states"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view_finder">
 
@@ -44,8 +45,8 @@
 
     <FrameLayout
         android:id="@+id/view_finder"
-        android:layout_width="417dp"
-        android:layout_height="549dp"
+        android:layout_width="410dp"
+        android:layout_height="731dp"
         android:paddingTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
