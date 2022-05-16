@@ -25,9 +25,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <ListView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="145dp" />
+            android:layout_height="152dp"
+            android:background="?attr/selectableItemBackground"
+            android:minHeight="64dp">
+
+            <ImageView
+                android:id="@+id/mtrl_list_item_icon"
+                android:layout_width="47dp"
+                android:layout_height="43dp"
+                android:foreground="@drawable/account"
+                android:padding="16dp" />
+
+            <TextView
+                android:id="@+id/mtrl_list_item_text"
+                android:layout_width="347dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/mtrl_list_item_icon"
+                android:autoText="false"
+                android:background="#65777373"
+                android:maxLines="1"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:text="Coiffeur"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mtrl_list_item_secondary_text"
+                android:layout_width="347dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mtrl_list_item_text"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@id/mtrl_list_item_icon"
+                android:background="#5C756F6F"
+                android:maxLines="2"
+                android:paddingEnd="16dp"
+                android:text="22 Av de la paix, Paris"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -49,7 +91,8 @@
             android:layout_height="98dp"
             android:layout_marginHorizontal="15dp"
             android:background="@drawable/close"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/previous" />
 
         <Button
             android:id="@+id/button5"
@@ -57,7 +100,8 @@
             android:layout_height="93dp"
             android:layout_marginHorizontal="15dp"
             android:background="@drawable/ok"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/done" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
