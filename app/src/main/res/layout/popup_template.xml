@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Titre du popup"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="23dp" />
+
+    <TextView
+        android:id="@+id/subtitle_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Sous-titre"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_popup" />
+
+    <ImageButton
+        android:id="@+id/croix_button"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="31dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintStart_toEndOf="@+id/title_popup"
+        app:srcCompat="@android:drawable/btn_dialog"
+        tools:layout_editor_absoluteY="23dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
