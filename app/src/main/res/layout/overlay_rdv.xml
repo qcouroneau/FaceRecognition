@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rendez-vous"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/subtitle_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmez-vous la demande de rendez-vous"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <Button
+        android:id="@+id/photo_reference"
+        android:layout_width="147dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#808080"
+        android:text="Annuler"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="575dp" />
+
+    <Button
+        android:id="@+id/photo_daily"
+        android:layout_width="147dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#808080"
+        android:text="Oui"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="575dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
