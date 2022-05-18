@@ -16,6 +16,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.myapplication.databinding.ActivityMainBinding;
 import com.google.android.material.snackbar.Snackbar;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
