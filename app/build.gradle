@@ -4,9 +4,10 @@ apply plugin: 'de.undercouch.download'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "org.tensorflow.lite.examples.facerecognition"
+        applicationId "com.example.myapplication"
         minSdkVersion 21
         targetSdkVersion 28
+        applicationId "com.example.myapplication"
         versionCode 1
         versionName "1.0"
     }
