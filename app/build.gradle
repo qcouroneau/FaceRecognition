@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
     defaultConfig {
         applicationId "org.tensorflow.lite.examples.detection"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
     }
@@ -29,6 +29,9 @@ android {
     lint {
         abortOnError false
     }
+    aaptOptions {
+        noCompress "tflite"
+    }
     namespace 'org.tensorflow.lite.examples.detection'
 }
 
@@ -51,12 +54,21 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.0.0'
     implementation 'androidx.navigation:navigation-ui:2.0.0'
     implementation('org.tensorflow:tensorflow-lite:0.0.0-nightly') { changing = true }
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0-rc2'
     implementation 'com.google.code.gson:gson:2.9.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.google.truth:truth:1.0.1'
 
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT'
+    // The GPU delegate library is optional. Depend on it as needed.
+    implementation 'org.tensorflow:tensorflow-lite-gpu:0.0.0-nightly-SNAPSHOT'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.0.0-nightly-SNAPSHOT'
+
+
     // added MLKit dependencies for face detector
     implementation 'com.google.mlkit:face-detection:16.0.0'
 
 }
+
+
