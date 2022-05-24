@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="402dp"
+        android:layout_height="538dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="3dp"
@@ -25,39 +25,109 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <ListView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="145dp" />
+            android:layout_height="152dp"
+            android:background="?attr/selectableItemBackground"
+            android:minHeight="64dp">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="412dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="132dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="126dp"
+                android:contentDescription="@android:string/unknownName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.319" />
+
+            <ImageView
+                android:id="@+id/mtrl_list_item_icon"
+                android:layout_width="57dp"
+                android:layout_height="52dp"
+                android:foreground="@drawable/account"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mtrl_list_item_text"
+                android:layout_width="330dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="15dp"
+                android:autoText="false"
+                android:background="#65777373"
+                android:maxLines="1"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:text="Coiffeur"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/mtrl_list_item_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mtrl_list_item_secondary_text"
+                android:layout_width="330dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:background="#5C756F6F"
+                android:maxLines="2"
+                android:paddingEnd="16dp"
+                android:text="22 Av de la paix, Paris"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/mtrl_list_item_icon"
+                app:layout_constraintTop_toBottomOf="@id/mtrl_list_item_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="395dp"
-        android:layout_height="195dp"
-        android:layout_marginBottom="39dp"
+        android:layout_width="278dp"
+        android:layout_height="110dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.973">
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
-            android:layout_height="98dp"
-            android:layout_marginHorizontal="15dp"
-            android:background="@drawable/close"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#808080"
+            android:text="Annuler"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
-            android:layout_height="93dp"
-            android:layout_marginHorizontal="15dp"
-            android:background="@drawable/ok"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#808080"
+            android:text="Envoyer"
+            android:textColorHighlight="#EFEAEA"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
